@@ -39,7 +39,7 @@ while True:
         v = V[state]
         action = policy[state]
         next_state = transition(state, actions[action])
-        reward = rewards[state]  # Corrected line
+        reward = rewards[state]  
         V[state] = reward + gamma * V[next_state]
         delta = max(delta, abs(v - V[state]))
     if delta < 1e-6:
